@@ -18,8 +18,8 @@ class SB3ActionMaskWrapper(pettingzoo.utils.BaseWrapper):
         super().reset(seed, options)
 
         # Retire a máscara de ação do espaço de observação
+        # Box(0, 1, (6, 7, 2), int8)
         self.observation_space = super().observation_space(self.possible_agents[0])["observation"]
-
         self.action_space = super().action_space(self.possible_agents[0])
 
         # Retornar observação inicial, informações (os ambientes PettingZoo AEC não o fazem por padrão)

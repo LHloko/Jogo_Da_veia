@@ -101,7 +101,7 @@ class Zuita_Env(AECEnv):
         self.possible_agents = self.agents[:]
 
         self.action_spaces = {i: spaces.Discrete(9) for i in self.agents}
-        self.observation_space = {
+        self.observation_spaces = {
             i: spaces.Dict(
                  {
                  'observation': spaces.Box(0, 1, (3,3,2), dtype=np.int8),
